@@ -1,6 +1,6 @@
 function logout(){
     firebase.auth().signOut().then(()=>{
-        window.location.href = '../../index_.html'
+        window.location.href = '../../index.html'
     }).catch(()=>{
         alert('Erro ao fazer logOut')
     })
@@ -63,10 +63,6 @@ function addTransactionsToScreen(transactions){
 
         
     }); 
-    //forEach (elemento => {}) Equivale a:
-    // for(i=0; i<transactions.length; i++){
-    //     let transactions[i]
-    // }
 }
 
 // Criando uma novas funçãos para diminuir a função addTransactionsToScreen q esta muito grande
@@ -143,44 +139,3 @@ function RemoveTransaction(transaction){
                 alert('Erro ao remover transação')
             })
 }
-
-
-// const fakeTransactions = [{
-//     type: 'expense',
-//     date: '2024-01-01',
-//     money: {
-//         currency: 'R$',
-//         value: 10
-//     },
-//     transactionType: 'Supermercado'
-// },
-// {
-//     type: 'income',
-//     date: '2024-09-05',
-//     money: {
-//         currency: 'R$',
-//         value: 37000
-//     },
-//     transactionType: 'Salário',
-//     description: 'Empresa A'
-// },
-// {
-//     type: 'expense',
-//     date: '2024-01-10',
-//     money: {
-//         currency: 'EUR',
-//         value: 10
-//     },
-//     transactionType: 'Transporte',
-//     description: 'Metrô ida e volta'
-// },
-// {
-//     type: 'expense',
-//     date: '2024-05-01',
-//     money: {
-//         currency: 'USD',
-//         value: 1000
-//     },
-//     transactionType: 'Aluguel',
-//     description: 'Mensalidade'
-// }]

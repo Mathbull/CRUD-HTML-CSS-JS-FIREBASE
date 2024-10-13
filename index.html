@@ -1,49 +1,59 @@
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
-    <style>
-        p{
-            color: green;
-        }
-        button{
-            background-color: blue;
-            color: white;
-            padding: 10px;
-            border: none;
-        }
-        body{
-            background: silver;
-        }
-        h1{
-            text-align: center;
-            text-decoration: underline;
-            font-size: 40px;
-        }
-    </style>
-</head>
-<body>
-    <h1>Titulo qualquer</h1>
-    <p>Campos de entradas</p>
-    <br>
-    <p>Recebe somente testo</p>
-    <input type="text">
-    <br>
-    <p>Abre um calendario no no cell ou desktop</p>
-    <input type="date">
-    <br>
-    <p>Recebe somente número, em cell, abre o teclado só de número</p>
-    <input type="number">
-    <br>
-    <p>Já vem com um @ para o email</p>
-    <input type="email">
-    <br>
-    <p>Já esconde a senha </p>
-    <input type="password">
+<!DOCTYPE html>
+<html>
+    <header>
+        <title>Login - controle de gastos</title>
+    </header>
+    
+    <body class="centralize">
+        <form action="exemplo.html">
+            <div class="form-field">
+                <div><label for="">Email</label><br></div>
+                <input type="email" name="email" placeholder="Seu email.com" id="email" onchange="OnChangeEmail()">
+                <div class="error" id="email-required-error">
+                    Email é obrigatório 
+                </div>
+                <div class="error" id="email-invalid-error">
+                    Email invalido
+                </div>
+            </div>
+            <div class="form-field">
+                <div><label for="">Senha</label></div>
+                <input type="password" name="password" placeholder="Senha" id="password" onchange="onChangePassword()">
+                <div class="error" id="password-required-error">
+                    Senha é obrigatório
+                </div>
+            </div>
+            <div>
+                <button type="button" class="clear disabled_button"  id="recover-password-button" onclick="recoverPassword()" >Recuperar senha</button>
+            </div>
+            <div>
+                <button type="button" class="solid disabled_button"  id="loginButton" onclick="login()">Entrar</button>
+            </div>
+            <div>
+                <button type="button" class="outline" onclick="register()">Registrar</button>
+            </div>
+            
+            
+            
+            
+            
+        </form>
+        
+    </body>
 
-    <br><br>
 
-    <button onclick="alert('CLICADOOOOOOO')">Me click</button>
-</body>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="global.css">
+
+
+    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js"></script>   
+    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth-compat.js"></script>
+    <script src="firebase-init.js"></script>
+
+    <script src="index.js"></script>
+    <script src="validations.js"></script>
+    <script src="loading.js"></script>
+
+
 </html>
+
