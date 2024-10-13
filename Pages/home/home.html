@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <header>
+        <meta charset="UTF-8">
+        <title>Home - controle de gastos</title>
+    </header>
+     
+    <body>
+        
+        <header>
+            <button type="button" class="clear" onclick="logout()">
+                Sair
+            </button>
+        </header>
+        
+        <ol id="transactions">
+            <!-- <li class="expense">
+                <b>01/01/2024</b>
+                <p>R$ 10,00</p>
+                <p>Supermercado</p>
+            </li>
+            <li class="income">
+                <b>05/09/2024</b>
+                <p>R$ 37,00</p>
+                <p>Salário</p>
+                <p>Empresa A</p>
+            </li>
+            <li class="expense">
+                <b>10/01/2024</b>
+                <p>EUR 10,00</p>
+                <p>Transporte</p>
+                <p>Metrô ida e volta</p>
+            </li>
+            <li class="expense"  >
+                <b>01/05/2024</b>
+                <p>USD 10,00</p>
+                <p>Aluguel</p>
+                <P>Mensalidade</P>
+            </li>
+             -->
+        </ol>
+        <button type="button" class="fab fixed bottom right" onclick="newTransaction()">
+            +
+        </button>
+
+    </body>
+    <link rel="stylesheet" href="../../global.css">
+    <link rel="stylesheet" href="home.css">
+
+    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-app-compat.js"></script>   
+    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.1/firebase-firestore-compat.js"></script>
+    <script src="../../firebase-init.js"></script>
+    <script src="../../auth-guard.js"></script>
+    <script src="../../loading.js"></script>
+    <script src="../../services/transaction.server.js"></script>
+    <script src="home.js"></script>
+    
+
+
+</html>
+
